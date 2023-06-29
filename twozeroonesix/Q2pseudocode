@@ -1,0 +1,20 @@
+function checkMatchedBrackets(inputString):
+    if inputString is empty:
+        return "There is no bracket in the input"
+
+    create an empty stack
+
+    for each character c in the inputString:
+        if c is a left bracket:
+            push c to the stack
+        else if c is a right bracket:
+            if stack is empty:
+                return "Not all brackets are matched."
+            topBracket = stack.pop()
+            if topBracket does not match c:
+                return "Not all brackets are matched."
+
+    if stack is not empty:
+        return "Not all brackets are matched."
+    else:
+        return "YES - all matched!"
